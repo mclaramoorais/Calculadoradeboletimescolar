@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boletim Escolar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Boletim Escolar</h1>
+    <p class="subtitle">Informe as notas e clique em <strong>Gerar resumo</strong>.</p>
+
+    <section class="grid">
+      <label for="n1">Nota 1</label>
+      <input id="n1" type="number" step="0.01" min="0" max="10" required />
+
+      <label for="n2">Nota 2</label>
+      <input id="n2" type="number" step="0.01" min="0" max="10" required />
+
+      <label for="n3">Nota 3</label>
+      <input id="n3" type="number" step="0.01" min="0" max="10" required />
+
+      <label for="n4">Nota 4</label>
+      <input id="n4" type="number" step="0.01" min="0" max="10" required />
+    </section>
+
+    <section id="extraNotas" class="extra-notas">
+      <label for="nrec">Recuperação</label>
+      <input id="nrec" type="number" step="0.01" min="0" max="10" placeholder="Opcional" />
+
+      <label for="nfinal">Final</label>
+      <input id="nfinal" type="number" step="0.01" min="0" max="10" placeholder="Opcional" />
+    </section>
+
+    <button id="btnResumo" type="button">Gerar resumo</button>
+    <p id="erro" class="erro" aria-live="polite"></p>
+
+    <article id="resultado" class="resumo">
+      Preencha os dados para visualizar o resultado.
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
